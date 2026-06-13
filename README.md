@@ -26,7 +26,49 @@ GPS-based vehicle monitoring and theft prevention system using Python simulation
 
 ## Folder Structure
 
-(Project Tree)
+IoT-Vehicle-Tracking-Theft-Prevention-System/
+│
+├── dashboard/
+│   └── app.py
+│
+├── python_simulation/
+│   ├── geofence.py
+│   ├── logger.py
+│   └── theft_detector.py
+│
+├── data/
+│   └── gps_data.csv
+│
+├── outputs/
+│   ├── location_history.csv
+│   └── location_report.pdf
+│
+├── reports/
+│   └── report_generator.py
+│
+├── images/
+│   ├── folder_structure.png
+│   ├── gps_dataset.png
+│   ├── terminal_output.png
+│   ├── theft_detection.png
+│   ├── dashboard_home.png
+│   ├── dashboard_map.png
+│   ├── pdf_report.png
+│   └── github_repository.png
+│
+├── docs/
+│   ├── architecture.md
+│   ├── implementation_steps.md
+│   └── interview_questions.md
+│
+├── circuit_diagram/
+│   └── vehicle_tracking_circuit.png
+│
+├── README.md
+├── requirements.txt
+├── main.py
+├── .gitignore
+└── LICENSE
 
 ## Setup
 
@@ -37,10 +79,6 @@ pip install -r requirements.txt
 python main.py
 
 streamlit run dashboard/app.py
-
-## Sample Output
-
-(Add screenshots)
 
 ## Future Improvements
 
