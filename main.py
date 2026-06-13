@@ -1,16 +1,22 @@
 import pandas as pd
+from python_simulation.geofence import check_geofence
 
 data = pd.read_csv("data/gps_data.csv")
 
 for _, row in data.iterrows():
 
-    lat = row["latitude"]
-    lon = row["longitude"]
+    theft, distance = check_geofence(
+        row["latitude"],
+        row["longitude"]
+    )
 
-    maps_url = f"https://www.google.com/maps?q={lat},{lon}"
+    if theft:
+        status = "THEFT ALERT"
+    else:
+        status = "SAFE"
 
-    print("\nVehicle Position")
-    print("Latitude:", lat)
-    print("Longitude:", lon)
-    print("Speed:", row["speed"])
-    print("Google Maps:", maps_url)
+    print(
+        row["timestamp"],
+        status,
+        round(distance,2)
+    )
